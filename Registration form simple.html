@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <style>
-        body { font-family: Arial; text-align: center; padding: 20px; }
-        input, select, button { display: block; margin: 10px auto; padding: 8px; width: 80%; }
+        body { font-family: Arial; text-align: center; }
+        input, select, button { margin: 10px; padding: 8px; width: 80%; }
         #success { color: green; display: none; }
     </style>
 </head>
 <body>
-    <form onsubmit="event.preventDefault();success.style.display='block';">
+    <form onsubmit="event.preventDefault();document.getElementById('success').style.display='block';">
         <h2>Register</h2>
         <input placeholder="Name" required>
         <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Phone" pattern="[0-9]{10}" required>
+        <input type="tel" placeholder="Phone" pattern="\d{10}" required>
         <select required>
             <option value="">Select Event</option>
             <option>Workshop</option>
